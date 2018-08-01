@@ -13,3 +13,17 @@
 // limitations under the License.
 
 console.log("script is running...");
+function Basic_Alarm(alarmMessage){
+  return alarmMessage;
+}
+console.log(Basic_Alarm("My alarm!"));
+
+function  My_Alarm(time) {
+  return Basic_Alarm(" wake up! its ") + time;
+}
+console.log(My_Alarm("7.00"));
+
+function  Mom_Alarm(time) {
+return "Hey, Mom," + My_Alarm(time)
+}
+    console.log(Mom_Alarm("9.00"));
