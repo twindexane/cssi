@@ -14,35 +14,22 @@
 
 console.log("Running Click Events Script");
 
-let box1 = document.querySelector('#box1');
-let box2 = document.querySelector('#box2');
-let box3 = document.querySelector('#box3');
+document.getElementById('box1').addEventListener('click',()=>{boxcolor(0);});
+document.getElementById('box2').addEventListener('click',()=>{boxcolor(1);});
+document.getElementById('box3').addEventListener('click',()=>{boxcolor(2);});
 
-let box4 = document.querySelector('#box4');
-let box5 = document.querySelector('#box5');
-let box6 = document.querySelector('#box6');
-let box7 = document.querySelector('#rect');
+const colors = ['red', 'pink', 'orange'];
 
-
-box1.addEventListener('click',() => setColor('box2', 'box3', 'red'));
-box2.addEventListener('click',() => setColor('box1', 'box3', 'pink'));
-box3.addEventListener('click',() => setColor('box1', 'box2', 'orange'));
-box4.addEventListener('click',() => {toggle(box4);})
-box5.addEventListener('click',() => {toggle(box5);});
-box6.addEventListener('click',() => setColor('box1', 'box2', 'orange'));
-box7.addEventListener('click',() => setColor('box1', 'box2', 'orange'));
-
-
-function setColor(boxid1, boxid2, boxColor){
-  let box = document.getElementById(boxid1);
-  box.style.backgroundColor = boxColor;
-  box =document.getElementById(boxid2);
-  box.style.backgroundColor = boxColor;
-}
-function toggle(box) {
-  box.classList.toggle("active");
+function boxcolor(value) {
+  let ng = document.getElementsByClassName('box')
+  ng[0].style.backgroundColor = colors[value];
+  ng[1].style.backgroundColor = colors[value];
+  ng[2].style.backgroundColor = colors[value];
 }
 
-function toggle2(box2) {
-  box2.classList.toggle("active");
+document.getElementById('box4').addEventListener('click',()=>{boxcol('box4');});
+document.getElementById('box5').addEventListener('click',()=>{boxcol('box5');});
+
+function boxcol(value){
+  let cg = document.getElementById(value).classList.toggle('active');
 }
