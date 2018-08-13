@@ -25,7 +25,20 @@ inside_movie = {
 }
 
 # Do not edit the code above!
+inside_movie["year_released"] = 2015
+inside_movie['score'] = 8.2
+inside_movie['reviews'] = 492446
 
-# Write your code below to update the information in accordance with its
+# removing key out of
+inside_movie.pop('out_of')
+
+#adding new key/value pair to dictionary
+inside_movie['genre'] = [ "Animation", "Adventure", "Comedy" ]
+
+#printing key/values
+for i in inside_movie:
+    print key, "," 
+
+
+
 # IMDB page: http://www.imdb.com/title/tt2096673/
-
